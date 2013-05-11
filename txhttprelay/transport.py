@@ -31,14 +31,14 @@ from twisted.internet.defer import succeed
 from txhttprelay.parser import ParserError
 
 # try and import the verifying SSL context from txverifyssl
-#try:
-#    from txverifyssl.context import VerifyingSSLContext as SSLContextFactory
-#except ImportError:
-#    # if txverifyssl is not installed default to the built-in SSL context, this works but has no SSL verification
-from twisted.internet.ssl import ClientContextFactory
-class SSLContextFactory(ClientContextFactory):
-    def getContext(self, hostname, port):
-        return ClientContextFactory.getContext(self)
+try:
+    from txverifyssl.context import VerifyingSSLContext as SSLContextFactory
+except ImportError:
+    # if txverifyssl is not installed default to the built-in SSL context, this works but has no SSL verification
+    from twisted.internet.ssl import ClientContextFactory
+    class SSLContextFactory(ClientContextFactory):
+        def getContext(self, hostname, port):
+            return ClientContextFactory.getContext(self)
 
 class RequestError(Exception):
     pass

@@ -1,0 +1,96 @@
+2013-05-11 15:00:42+0100 [-] Log opened.
+2013-05-11 15:00:42+0100 [-] twistd 13.0.0 (/usr/bin/python 2.7.3) starting up.
+2013-05-11 15:00:42+0100 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2013-05-11 15:00:42+0100 [-] RelayFactory starting on 9876
+2013-05-11 15:00:42+0100 [-] Starting factory <txhttprelay.relay.RelayFactory instance at 0x13e5878>
+2013-05-11 15:00:49+0100 [RelayProtocol,0,127.0.0.1] Starting factory <twisted.web.client._HTTP11ClientFactory instance at 0x13e56c8>
+2013-05-11 15:00:49+0100 [-] Stopping factory <twisted.web.client._HTTP11ClientFactory instance at 0x13e56c8>
+2013-05-11 15:01:00+0100 [RelayProtocol,0,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 88, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 73, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 215, in doRead
+	    return self._dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 221, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/protocols/basic.py", line 464, in dataReceived
+	    self.lineReceived(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 119, in lineReceived
+	    self.parse(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 58, in parse
+	    if 'request' not in deserialised:
+	exceptions.TypeError: argument of type 'int' is not iterable
+	
+2013-05-11 15:01:04+0100 [RelayProtocol,1,127.0.0.1] Starting factory <twisted.web.client._HTTP11ClientFactory instance at 0x13e5cf8>
+2013-05-11 15:01:04+0100 [-] Stopping factory <twisted.web.client._HTTP11ClientFactory instance at 0x13e5cf8>
+2013-05-11 15:01:06+0100 [RelayProtocol,1,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 88, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 73, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 215, in doRead
+	    return self._dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 221, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/protocols/basic.py", line 464, in dataReceived
+	    self.lineReceived(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 119, in lineReceived
+	    self.parse(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 58, in parse
+	    if 'request' not in deserialised:
+	exceptions.TypeError: argument of type 'int' is not iterable
+	
+2013-05-11 15:01:19+0100 [-] Received SIGTERM, shutting down.
+2013-05-11 15:01:19+0100 [-] (TCP Port 9876 Closed)
+2013-05-11 15:01:19+0100 [-] Stopping factory <txhttprelay.relay.RelayFactory instance at 0x13e5878>
+2013-05-11 15:01:19+0100 [-] Main loop terminated.
+2013-05-11 15:01:19+0100 [-] Server Shut Down.
+2013-05-11 15:01:20+0100 [-] Log opened.
+2013-05-11 15:01:20+0100 [-] twistd 13.0.0 (/usr/bin/python 2.7.3) starting up.
+2013-05-11 15:01:20+0100 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2013-05-11 15:01:20+0100 [-] RelayFactory starting on 9876
+2013-05-11 15:01:20+0100 [-] Starting factory <txhttprelay.relay.RelayFactory instance at 0x2a57878>
+2013-05-11 15:01:27+0100 [RelayProtocol,0,127.0.0.1] Starting factory <twisted.web.client._HTTP11ClientFactory instance at 0x2a576c8>
+2013-05-11 15:01:28+0100 [HTTP11ClientProtocol,client] Stopping factory <twisted.web.client._HTTP11ClientFactory instance at 0x2a576c8>
+2013-05-11 15:01:33+0100 [RelayProtocol,0,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 88, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 73, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 215, in doRead
+	    return self._dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 221, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/protocols/basic.py", line 464, in dataReceived
+	    self.lineReceived(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 119, in lineReceived
+	    self.parse(line)
+	  File "/home/meeb/github/txhttprelay/txhttprelay/relay.py", line 58, in parse
+	    if 'request' not in deserialised:
+	exceptions.TypeError: argument of type 'int' is not iterable
+	
