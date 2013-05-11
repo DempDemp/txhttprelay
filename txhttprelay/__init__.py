@@ -24,6 +24,8 @@ __all__ = [
     'transport',
 ]
 
+from txhttprelay.relay import RelayFactory
+
 '''
 
     eof

@@ -9,7 +9,7 @@ if rundir not in sys.path:
 from twisted.application import service, internet
 
 import config
-from txhttprelay.relay import RelayFactory
+from txhttprelay import RelayFactory
 
 application = service.Application('txhttprelay')
 f = RelayFactory(config)
