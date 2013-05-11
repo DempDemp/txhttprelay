@@ -1,0 +1,25 @@
+LISTEN_PORT = 9876
+LISTEN_HOST = '127.0.0.1'
+USE = 'tcp'
+
+from txhttprelay.auth import HttpBasicAuth
+some_auth = HttpBasicAuth(username='some username', password='some password')
+
+from txhttprelay.parser import EncodedUpJsonDown
+standard_parser = EncodedUpJsonDown()
+
+# REQUEST items are formatted as:
+# 'name': ('HTTP method', 'URL with placeholders', expected response code, auth instance, parser instance)
+# you can use None for both instances, a null (no auth, no parsing) module will be used
+
+REQUESTS = {
+    
+    # get the latest news for half-life 2
+    'hl2': ('GET', ' http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=220&count=3&maxlength=300&format=json', 200, None, standard_parser),
+    
+    # some private API
+    'do_stuff': ('POST', 'https://api.example.com/v1/user/{user_id}', 200, some_auth, standard_parser),
+    
+    # ... add other requests here ...
+    
+}
