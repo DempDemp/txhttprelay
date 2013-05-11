@@ -17,4 +17,6 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+twistd.log
+txhttprelay.pid
 local_config.py
